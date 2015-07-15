@@ -7,8 +7,8 @@
   <link rel="stylesheet" type="text/css" href="style.css"
 </head>
 <body>
-  <div class="big-border">
-    <nav class="nav">
+  <div class="flex-container">
+    <nav class="nav flex-item">
       <ul class="navlist">
         <li><a href="#">View Music</a></li>
         <li><a class="border-lines" href="#">Add Music<a></li>
@@ -16,85 +16,81 @@
         <br>
       </ul>
     </nav>
-    <br>
-      <div class="flexbox">
-        <div class="left-box">
-          <p class="songlengthtext">Song length:</p>
-          <label class="songlength" for"songlength"></label>
-          <input class="songlength" type="range" name="songlength">
-          <br>
-          <p class="artisttext">Artist:</p>
-          <label class="artist" for="feedback-type"></label>
-            <select class="artist" id="feedback-type" name="type">
-              <option>Options</option>
-              <option>#</option>
-              <option>#</option>
-            </select>
-          <br>
-          <p class="albumtext">Album:</p>
-          <label class="album" for="feedback-type"></label>
-            <select class="album" id="feedback-type" name="type">
-              <option>Options</option>
-              <option>#</option>
-              <option>#</option>
-            </select>
-          <legend class="genre">Genre</legend>
-            <table>
-              <tr>
-                <td><input type="checkbox" name="rock" value="rock"></input></td>
-                <td>Rock</td>
-                <td><input type="checkbox" name="Classical" value="Classical"></input></td> 
-                <td>Classical</td>
-              <tr>
-                <td><input type="checkbox" name="pop" value="pop"></input></td>
-                <td>Pop</td>
-                <td><input type="checkbox" name="blues" value="blues"></input></td>
-                <td>Blues</td>
-              <tr>
-                <td><input type="checkbox" name="jazz" value="jazz"></td>
-                <td>Jazz</td>
-                <td><input type="checkbox" name="Hip Hop" value="Hip Hop"></input></td> <td>Hip Hop</td>
-            </table>
-          <br>
-          <input class="filter" type="submit" value="Filter"></input>
-        </div>
-        <br>
-        <div id="song-list" class="right-box">
-          <h2>Song Name</h2>
-          <table>
-            <tr>
-              <td>Artist Name</td>
-              <td class="border-lines">Album Name</td>
-              <td>Genre</td>
-            </tr>
-          </table>
-          <h2>Song Name</h2>
-          <table>
-            <tr>
-              <td>Artist Name</td>
-              <td class="border-lines">Album Name</td>
-              <td>Genre</td>
-            </tr>
-          </table>
-          <h2>Song Name</h2>
-          <table>
-            <tr>
-              <td>Artist Name</td>
-              <td class="border-lines">Album Name</td>
-              <td>Genre</td>
-            </tr>
-          </table>
-          <h2>Song Name</h2>
-          <table>
-            <tr>
-              <td>Artist Name</td>
-              <td class="border-lines">Album Name</td>
-              <td>Genre</td>
-            </tr>
-          </table>  
-        </div>
-      </div>
-  </div> 
+    <div class="left-box flex-item">
+      <p class="songlengthtext">Song length:</p>
+      <label class="songlength" for"songlength"></label>
+      <input class="songlength" type="range" name="songlength">
+      <br>
+      <p class="artisttext">Artist:</p>
+      <label class="artist" for="feedback-type"></label>
+        <select class="artist" id="feedback-type" name="type">
+          <option>Options</option>
+          <option>#</option>
+          <option>#</option>
+        </select>
+      <br>
+      <p class="albumtext">Album:</p>
+      <label class="album" for="feedback-type"></label>
+        <select class="album" id="feedback-type" name="type">
+          <option>Options</option>
+          <option>#</option>
+          <option>#</option>
+        </select>
+      <legend class="genre">Genre</legend>
+      <table>
+        <tr>
+          <td><input type="checkbox" name="rock" value="rock"></input></td>
+          <td>Rock</td>
+          <td><input type="checkbox" name="Classical" value="Classical"></input></td> 
+          <td>Classical</td>
+        <tr>
+          <td><input type="checkbox" name="pop" value="pop"></input></td>
+          <td>Pop</td>
+          <td><input type="checkbox" name="blues" value="blues"></input></td>
+          <td>Blues</td>
+        <tr>
+          <td><input type="checkbox" name="jazz" value="jazz"></td>
+          <td>Jazz</td>
+          <td><input type="checkbox" name="Hip Hop" value="Hip Hop"></input></td> <td>Hip Hop</td>
+      </table>
+      <br>
+      <input class="filter" type="submit" value="Filter"></input>
+    </div>
+    <div id="song-list" class="right-box flex-item">
+      <h2>Song Name</h2>
+      <table>
+        <tr>
+          <td>Artist Name</td>
+          <td class="border-lines">Album Name</td>
+          <td>Genre</td>
+        </tr>
+      </table>
+      <h2>Song Name</h2>
+      <table>
+        <tr>
+          <td>Artist Name</td>
+          <td class="border-lines">Album Name</td>
+          <td>Genre</td>
+        </tr>
+      </table>
+      <h2>Song Name</h2>
+      <table>
+        <tr>
+          <td>Artist Name</td>
+          <td class="border-lines">Album Name</td>
+          <td>Genre</td>
+        </tr>
+      </table>
+      <h2>Song Name</h2>
+      <table>
+        <tr>
+          <td>Artist Name</td>
+          <td class="border-lines">Album Name</td>
+          <td>Genre</td>
+        </tr>
+      </table>  
+    </div>
+  </div>
   <script type="text/javascript" src="main.js">
   </script> 
 </body>
