@@ -5,7 +5,7 @@
   /*display: inline block;*/
   margin: 0;
   padding: 0;
-  }
+}
 
 .navlist > li {
   display: inline-block;
@@ -20,7 +20,7 @@
   padding 0;
   cursor: pointer;
   border: solid 1px;
-  }
+}
 
 .flexbox {
   display: flex;
