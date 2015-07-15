@@ -16,11 +16,13 @@ for (i = 0; i < songs.length; i++) {
   songs[i]=songs[i].replace(/@/g, "");
   songs[i]=songs[i].replace(">", "-");
   songs[i]=songs[i].replace("*", "");
+  songList.innerHTML += "<section class='alternating-colors'>" + songs[i] + "</section>";
+
 }
 
 console.log(songs);
+// songList.innerHTML = songs;
 
-songList.innerHTML=songs;
 
 
 

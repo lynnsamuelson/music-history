@@ -57,3 +57,14 @@
   flex-grow: 5;
 }
 
+.right-box section:nth-child(2n+0) {
+  background-color: #FFF5EE;
+}
+
+.right-box section:nth-child(2n+1) {
+  background-color: #F5FFFA;
+}
+
+.right-box section:first-of-type {
+  font: bold;
+}
