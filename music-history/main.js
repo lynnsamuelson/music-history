@@ -1,10 +1,10 @@
 
 $(document).ready(function() {
   
-
+  var songOutput = "";
   function page(songs) {
     var currentSong;
-    var songOutput = "";
+    
 
     for (var i = 0; i < songs.length; i++) {
       currentSong = songs[i];
