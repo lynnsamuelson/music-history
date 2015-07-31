@@ -48,6 +48,7 @@ $(document).ready(function() {
     $.ajax({
       url: "songs2.json"
     }).done(function(data) {
+      page(data.songs);
 
     })
   })
