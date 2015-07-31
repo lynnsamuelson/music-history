@@ -1,48 +1,56 @@
 
 $(document).ready(function() {
-  var currentSong;
-  var songOutput = "";
+  
+
+  function page(songs) {
+    var currentSong;
+    var songOutput = "";
+
+    for (var i = 0; i < songs.length; i++) {
+      currentSong = songs[i];
+      //console.log(currentSong);
+      songOutput += "<div id='song'>";
+      songOutput += "<div id='del'>" + currentSong.song + "</div>";
+      songOutput += "<div id='del'>" + currentSong.artist + "</div>";
+      songOutput += "<div id='del'>" + currentSong.album + "</div>";
+      songOutput += "<button id=\"delbtn\">Delete</button>";
+      songOutput += "<br>";
+      songOutput += "</div>";
+      //console.log(songOutput);
+      
+      
+    }
+    $('#songList').html(songOutput);
+    
+    
+  
+    console.log($('#del'));
+    console.log($('#delbtn'))
+    //console.log($('#song' + i))
+    $(document).on("click", "#delbtn", function() {
+        
+        //console.log("delete clicked");
+        $(this).parent("div").remove();
+      })
+}
 
   $.ajax({
     url: "songs.json"
   }).done(function(data) {
+    page(data.songs);
+  })
 
-
-   
-      for (var i = 0; i < data.songs.length; i++) {
-        currentSong = data.songs[i];
-        //console.log(currentSong);
-        songOutput += "<div id='song'>";
-        songOutput += "<div id='del'>" + currentSong.song + "</div>";
-        songOutput += "<div id='del'>" + currentSong.artist + "</div>";
-        songOutput += "<div id='del'>" + currentSong.album + "</div>";
-        songOutput += "<button id=\"delbtn\">Delete</button>";
-        songOutput += "<br>";
-        songOutput += "</div>";
-        console.log(songOutput);
-        
-          
-        }
-        $('#songList').html(songOutput);
-        
-        
-      
-        console.log($('#del'));
-        console.log($('#delbtn'))
-        //console.log($('#song' + i))
-        $(document).on("click", "#delbtn", function() {
-            
-            console.log("delete clicked");
-            $(this).parent("div").remove();
-          })
-    }) 
   
-  $("#morebtn").click()
+
+
+  $("#morebtn").click(function() {
+    console.log("morebtn clicked");
     $.ajax({
       url: "songs2.json"
     }).done(function(data) {
-    })
 
+    })
+  })
 });
 
 
